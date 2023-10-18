@@ -1,9 +1,9 @@
 # Node
-/node_modules
-/package-lock.json
+#/node_modules
+#/package-lock.json
 
 # App
-/dist
+#/dist
 
 # Vercel
 .vercel
