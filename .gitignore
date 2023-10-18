@@ -3,7 +3,7 @@
 #/package-lock.json
 
 # App
-#/dist
+/dist
 
 # Vercel
 .vercel
