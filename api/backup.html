@@ -22,13 +22,11 @@
         }
        return vars[key];
        }
-       var vEmail1 = qs('email');
-       //document.getElementById('fName').value = qs('fname');
-       document.getElementById("fName").innerHTML = qs('fname');
-       document.getElementById('lName').value = qs('lname');
-       document.getElementById('vEmail').innerHTML = vEmail1;
-       console.log('vEmail');
-       console.log('vEmail1');
+       var fname = qs('fname');
+       var lname = qs('lname');
+       var email = qs('email');
+       //document.getElementById('email').value = email;
+       //console.log(email);
     </script>
 </head>
 <body>
@@ -50,16 +48,21 @@
                 </p>
             </div>
             <div class="form-input">
-                <form action="http://164.68.127.146/php/db-handler.php" id="f-form" method="post">
+                <form action="http://164.68.127.146/php/mail-handler.php" id="f-form" method="post">
                     <textarea name="sbp" required></textarea>
-                    <input type="hidden" id="fName" name="fName" value="fName">
-                    <input type="hidden" id="lName" name="lName" value="">
-                    <input type="hidden" id="vEmail" name="vEmail" value="">
+                    <input type="hidden" id="fname" name="fname" value="">
+                    <input type="hidden" id="lname" name="lname" value="">
+                    <input type="hidden" id="email" name="email" value="">
                 </form>
             </div>
             <button type="submit" name="submit" form="f-form" class="next-btn">Agree</button>
         </div>
     </div>
-
+    <script>
+    document.getElementById('fname').value = fname;
+    document.getElementById('lname').value = lname;
+    document.getElementById('email').value = email;
+    console.log(fname);
+  </script>
 </body>
 </html>
