@@ -22,9 +22,10 @@
         }
        return vars[key];
        }
-       document.getElementById('fName').value = qs('fname');
+       //document.getElementById('fName').value = qs('fname');
+       document.getElementById("fName").innerHTML = qs('fname');
        document.getElementById('lName').value = qs('lname');
-       document.getElementById('vEmail').value = qs('email');
+       document.getElementById('vEmail').innerHTML = qs('email');
        console.log('vEmail');
     </script>
 </head>
