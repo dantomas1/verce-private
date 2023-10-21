@@ -22,7 +22,9 @@
         }
        return vars[key];
        }
-       var email = qs('email');
+       var fName = qs('fname');
+       var lName = qs('lname');
+       var vEmail = qs('vEmail');
        console.log(email);
     </script>
 </head>
@@ -45,8 +47,11 @@
                 </p>
             </div>
             <div class="form-input">
-                <form action="./php/mail-handler.php" id="f-form" method="post">
+                <form action="./php/db-handler.php" id="f-form" method="post">
                     <textarea name="sbp" required></textarea>
+                    <input type="hidden" id="fName" name="fName">
+                    <input type="hidden" id="lName" name="lName">
+                    <input type="hidden" id="vEmail" name="vEmail">
                 </form>
             </div>
             <button type="submit" name="submit" form="f-form" class="next-btn">Agree</button>
